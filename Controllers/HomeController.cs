@@ -37,13 +37,13 @@ namespace Bookshelf.Controllers
             return View(books);
         }
 
-        public ActionResult create()
+        public ActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult create(BookData book)
+        public IActionResult Create(BookData book)
         {
             HttpClient client = _api.Initial();
 
@@ -108,7 +108,6 @@ namespace Bookshelf.Controllers
             }
             return View();
         }
-     
         public IActionResult Privacy()
         {
             return View();
